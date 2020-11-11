@@ -105,18 +105,11 @@ section header span {
   margin-left: 10px;
 }
 
-section:first-of-type header h2 {
-  text-transform: uppercase;
-}
-section:first-of-type article p:first-of-type {
+section:first-of-type p:first-of-type {
   color: #888;
 }
-section:first-of-type article p:nth-of-type(2) {
+section:first-of-type p:nth-of-type(2) {
   font-size: 14px;
-}
-
-section:not(:first-of-type) header {
-  border-bottom: 1px solid #ddd;
 }
 
 .items-container {
@@ -165,6 +158,14 @@ section:not(:first-of-type) header {
 .items-container article .options-container:hover .options div:hover {
   background-color: #383838;
   color: #fff;
+}
+
+section:first-of-type header h2 {
+  text-transform: uppercase;
+}
+
+section:not(:first-of-type) header {
+  border-bottom: 1px solid #ddd;
 }
 
 .article-img {

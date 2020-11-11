@@ -117,27 +117,13 @@ section {
   }
 }
 
-section:first-of-type {
-  header h2 {
-    text-transform: uppercase;
+section:first-of-type p {
+  &:first-of-type {
+    color: $secondary-color;
   }
 
-  article {
-    p {
-      &:first-of-type {
-        color: $secondary-color;
-      }
-
-      &:nth-of-type(2) {
-        font-size: 14px;
-      }
-    }
-  }
-}
-
-section:not(:first-of-type) {
-  header {
-    border-bottom: 1px solid #ddd;
+  &:nth-of-type(2) {
+    font-size: 14px;
   }
 }
 
@@ -199,6 +185,18 @@ section:not(:first-of-type) {
         }
       }
     }
+  }
+}
+
+section:first-of-type {
+  header h2 {
+    text-transform: uppercase;
+  }
+}
+
+section:not(:first-of-type) {
+  header {
+    border-bottom: 1px solid #ddd;
   }
 }
 
