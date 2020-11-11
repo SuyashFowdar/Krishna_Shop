@@ -126,6 +126,9 @@ section:first-of-type p:nth-of-type(2) {
 .items-container article .details-container {
   padding: 0 10px 10px;
 }
+.items-container article .details-container p {
+  font-size: 14px;
+}
 .items-container article .options-container {
   position: relative;
 }
