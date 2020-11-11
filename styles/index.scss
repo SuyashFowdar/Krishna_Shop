@@ -226,8 +226,10 @@ section:not(:first-of-type) {
   }
 
   h3 {
-    margin: 5px 0;
+    margin: 10px 0;
     font-size: 17px;
+    color: $primary-color;
+    border-bottom: 1px solid $primary-color;
   }
 
   .footer-icon {

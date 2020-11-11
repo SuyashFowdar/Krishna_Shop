@@ -188,8 +188,10 @@ section:not(:first-of-type) header {
   font-size: 14px;
 }
 #footer h3 {
-  margin: 5px 0;
+  margin: 10px 0;
   font-size: 17px;
+  color: #d35266;
+  border-bottom: 1px solid #d35266;
 }
 #footer .footer-icon {
   height: 30px;
