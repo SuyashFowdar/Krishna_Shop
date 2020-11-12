@@ -31,7 +31,6 @@ select,
 
 select {
   min-width: 180px;
-  background-color: #fff;
 }
 
 input,
@@ -39,9 +38,13 @@ select {
   padding: 0 5px;
 }
 
-.ks-icon {
-  background-image: url(../assets/icons/KS.png);
+.bg-cover {
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ks-icon {
+  background-image: url(../icons/KS.png);
   border-radius: 10%;
 }
 
@@ -91,25 +94,42 @@ select {
   background-color: #262626;
 }
 
+.bg-white {
+  background-color: #fff;
+}
+
+.h-200px {
+  height: 200px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
 .page-max-width {
   max-width: 1000px;
   margin: 0 auto;
 }
 
-section header {
+section > div:first-child {
   color: #7f7f7f;
   margin: 20px 10px;
   padding: 0 10px;
 }
-section header span {
+section > div:first-child span {
   margin-left: 10px;
+}
+
+.header .search-header p {
+  margin: 10px;
 }
 
 section:first-of-type p:first-of-type {
   color: #888;
 }
-section:first-of-type p:nth-of-type(2) {
-  font-size: 14px;
+
+section:not(:first-of-type) > div:first-child {
+  border-bottom: 1px solid #ddd;
 }
 
 .items-container {
@@ -117,17 +137,10 @@ section:first-of-type p:nth-of-type(2) {
 }
 .items-container article {
   border-radius: 5px;
-  background-color: #fff;
   margin: 10px 0;
-}
-.items-container article .article-img-container {
-  height: 200px;
 }
 .items-container article .details-container {
   padding: 0 10px 10px;
-}
-.items-container article .details-container p {
-  font-size: 14px;
 }
 .items-container article .options-container {
   position: relative;
@@ -135,7 +148,6 @@ section:first-of-type p:nth-of-type(2) {
 .items-container article .options-container .options {
   display: none;
   position: absolute;
-  background-color: #fff;
 }
 .items-container article .options-container button {
   border: 0;
@@ -163,111 +175,94 @@ section:first-of-type p:nth-of-type(2) {
   color: #fff;
 }
 
-section:first-of-type header h2 {
+section:first-of-type > div:first-child h2 {
   text-transform: uppercase;
 }
 
-section:not(:first-of-type) header {
-  border-bottom: 1px solid #ddd;
-}
-
-.article-img {
-  min-height: 200px;
-}
-
-#footer {
-  background-color: #fff;
+.footer {
   padding: 0 10px;
   margin-top: 10px;
 }
-#footer .description,
-#footer nav {
+.footer .description,
+.footer nav {
   padding: 10px;
 }
-#footer p {
-  font-size: 14px;
-}
-#footer a {
+.footer a {
   margin-bottom: 8px;
-  font-size: 14px;
 }
-#footer h3 {
+.footer h3 {
   margin: 10px 0;
   font-size: 17px;
   color: #d35266;
   border-bottom: 1px solid #d35266;
 }
-#footer .footer-icon {
+.footer .footer-icon {
   height: 30px;
   width: 30px;
   margin: 0 5px;
 }
-#footer .copyright {
+.footer .copyright {
   font-size: 12px;
   border-top: 1px solid #888;
   padding: 10px 0;
 }
 
-#main-header .topbar {
+.header .topbar {
   background-color: #383838;
   box-shadow: 0 0 10px #000;
   position: fixed;
   z-index: 2;
 }
-#main-header .topbar nav {
+.header .topbar nav {
   height: 50px;
 }
-#main-header .topbar .fas:not(.fa-bars) {
+.header .topbar .fas:not(.fa-bars) {
   margin-right: 10px;
 }
-#main-header .header-icon {
+.header .header-icon {
   height: 30px;
   width: 30px;
   margin-left: 10px;
 }
-#main-header .search-header {
+.header .search-header {
   background-color: #d35266;
-  height: 200px;
   position: relative;
   color: #fff;
   padding-top: 50px;
   box-sizing: content-box;
 }
-#main-header .search-header .search-icon {
+.header .search-header .search-icon {
   opacity: 0.2;
   width: 100px;
   margin: 5%;
 }
-#main-header .search-header .header-content {
+.header .search-header .header-content {
   position: absolute;
   top: 50px;
 }
-#main-header .search-header h1 {
+.header .search-header h1 {
   font-size: 40px;
   margin-bottom: 0;
 }
-#main-header .search-header p {
-  margin: 10px;
-}
-#main-header .search-header form {
+.header .search-header form {
   padding: 0 4px;
 }
-#main-header .search-header form input,
-#main-header .search-header form select {
+.header .search-header form input,
+.header .search-header form select {
   height: 40px;
   border-radius: 3px;
   border: 0;
 }
-#main-header .menu {
+.header .menu {
   width: 50px;
 }
 
-#main-header a,
-#footer a {
+.header a,
+.footer a {
   color: #888;
 }
-#main-header a:hover,
-#footer a:hover {
+.header a:hover,
+.footer a:hover {
   color: #d35266;
 }
 
@@ -291,25 +286,25 @@ form select {
     margin: 4px 0;
   }
 
-  section header h2 {
-    font-size: 4vw;
-  }
-  section header a,
-section header span {
-    font-size: 3vw;
-  }
-
-  #footer a {
+  .footer a {
     margin-right: 20px;
   }
 
-  #main-header .search-header {
+  section > div:first-child h2 {
+    font-size: 4vw;
+  }
+  section > div:first-child a,
+section > div:first-child span {
+    font-size: 3vw;
+  }
+
+  .header .search-header {
     height: 300px;
   }
-  #main-header .header-icon {
+  .header .header-icon {
     margin-right: 10px;
   }
-  #main-header .menus-container:hover .other-menus {
+  .header .menus-container:hover .other-menus {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -320,7 +315,7 @@ section header span {
     height: auto;
     box-shadow: 0 0 5px #000;
   }
-  #main-header .menus-container:hover .other-menus a {
+  .header .menus-container:hover .other-menus a {
     padding: 10px;
   }
 }
@@ -335,11 +330,11 @@ section header span {
     width: 220px;
   }
 
-  section header h2 {
+  section > div:first-child h2 {
     font-size: 16px;
   }
-  section header a,
-section header span {
+  section > div:first-child a,
+section > div:first-child span {
     font-size: 14px;
   }
 
@@ -349,93 +344,63 @@ form select {
   }
 }
 .bg-dhoti {
-  background-image: url("../assets/img/dhoti.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("../img/dhoti.jpg");
 }
 
 .bg-kurta {
-  background-image: url("../assets/img/kurta.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("../img/kurta.jpg");
 }
 
 .bg-dress {
-  background-image: url("../assets/img/dress.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("../img/dress.jpg");
 }
 
 .bg-sari {
-  background-image: url("../assets/img/sari.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("../img/sari.jpg");
 }
 
 .bg-churidar {
-  background-image: url("../assets/img/churidar.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("../img/churidar.jpg");
 }
 
 .bg-mridanga {
-  background-image: url("../assets/img/mridanga.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("../img/mridanga.jpg");
 }
 
 .bg-kartal {
-  background-image: url("../assets/img/kartal.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("../img/kartal.jpg");
 }
 
 .bg-mridanga-fiber {
-  background-image: url("../assets/img/mridanga-fiber.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("../img/mridanga-fiber.jpg");
 }
 
 .bg-whomper {
-  background-image: url("../assets/img/whomper.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("../img/whomper.jpg");
 }
 
 .bg-side {
-  background-image: url("../assets/img/side.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("../img/side.jpg");
 }
 
 .bg-kanthi {
-  background-image: url("../assets/img/kanthi.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("../img/kanthi.jpg");
 }
 
 .bg-tilak {
-  background-image: url("../assets/img/tilak.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("../img/tilak.jpg");
 }
 
 .bg-bag {
-  background-image: url("../assets/img/bag.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("../img/bag.jpg");
 }
 
 .bg-locket {
-  background-image: url("../assets/img/locket.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("../img/locket.jpg");
 }
 
 .bg-sticker {
-  background-image: url("../assets/img/sticker.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("../img/sticker.jpg");
 }
 
 @media screen and (min-width: 0) and (max-width: 4000px) {

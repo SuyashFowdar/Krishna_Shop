@@ -37,7 +37,6 @@ select,
 
 select {
   min-width: 180px;
-  background-color: $white;
 }
 
 input,
@@ -45,9 +44,13 @@ select {
   padding: 0 5px;
 }
 
-.ks-icon {
-  background-image: url(../assets/icons/KS.png);
+.bg-cover {
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ks-icon {
+  background-image: url(../icons/KS.png);
   border-radius: 10%;
 }
 
@@ -100,13 +103,25 @@ select {
   }
 }
 
+.bg-white {
+  background-color: $white;
+}
+
+.h-200px {
+  height: 200px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
 .page-max-width {
   max-width: 1000px;
   margin: 0 auto;
 }
 
 section {
-  header {
+  & > div:first-child {
     color: #7f7f7f;
     margin: 20px 10px;
     padding: 0 10px;
@@ -117,13 +132,17 @@ section {
   }
 }
 
-section:first-of-type p {
-  &:first-of-type {
-    color: $secondary-color;
-  }
+.header .search-header p {
+  margin: 10px;
+}
 
-  &:nth-of-type(2) {
-    font-size: 14px;
+section:first-of-type p:first-of-type {
+  color: $secondary-color;
+}
+
+section:not(:first-of-type) {
+  & > div:first-child {
+    border-bottom: 1px solid #ddd;
   }
 }
 
@@ -132,19 +151,10 @@ section:first-of-type p {
 
   article {
     border-radius: 5px;
-    background-color: $white;
     margin: 10px 0;
-
-    .article-img-container {
-      height: 200px;
-    }
 
     .details-container {
       padding: 0 10px 10px;
-
-      p {
-        font-size: 14px;
-      }
     }
 
     .options-container {
@@ -153,7 +163,6 @@ section:first-of-type p {
       .options {
         display: none;
         position: absolute;
-        background-color: $white;
       }
 
       button {
@@ -193,23 +202,12 @@ section:first-of-type p {
 }
 
 section:first-of-type {
-  header h2 {
+  & > div:first-child h2 {
     text-transform: uppercase;
   }
 }
 
-section:not(:first-of-type) {
-  header {
-    border-bottom: 1px solid #ddd;
-  }
-}
-
-.article-img {
-  min-height: 200px;
-}
-
-#footer {
-  background-color: $white;
+.footer {
   padding: 0 10px;
   margin-top: 10px;
 
@@ -218,13 +216,8 @@ section:not(:first-of-type) {
     padding: 10px;
   }
 
-  p {
-    font-size: 14px;
-  }
-
   a {
     margin-bottom: 8px;
-    font-size: 14px;
   }
 
   h3 {
@@ -247,7 +240,7 @@ section:not(:first-of-type) {
   }
 }
 
-#main-header {
+.header {
   .topbar {
     background-color: $tertiary-color;
     box-shadow: 0 0 10px #000;
@@ -271,7 +264,6 @@ section:not(:first-of-type) {
 
   .search-header {
     background-color: $primary-color;
-    height: 200px;
     position: relative;
     color: $white;
     padding-top: 50px;
@@ -293,10 +285,6 @@ section:not(:first-of-type) {
       margin-bottom: 0;
     }
 
-    p {
-      margin: 10px;
-    }
-
     form {
       padding: 0 4px;
 
@@ -314,8 +302,8 @@ section:not(:first-of-type) {
   }
 }
 
-#main-header,
-#footer {
+.header,
+.footer {
   a {
     color: $secondary-color;
 
@@ -351,8 +339,14 @@ section:not(:first-of-type) {
     }
   }
 
+  .footer {
+    a {
+      margin-right: 20px;
+    }
+  }
+
   section {
-    header {
+    & > div:first-child {
       h2 {
         font-size: 4vw;
       }
@@ -364,13 +358,7 @@ section:not(:first-of-type) {
     }
   }
 
-  #footer {
-    a {
-      margin-right: 20px;
-    }
-  }
-
-  #main-header {
+  .header {
     .search-header {
       height: 300px;
     }
@@ -415,7 +403,7 @@ section:not(:first-of-type) {
   }
 
   section {
-    header {
+    & > div:first-child {
       h2 {
         font-size: 16px;
       }
@@ -439,9 +427,7 @@ $articles: ('dhoti', 'kurta', 'dress', 'sari', 'churidar', 'mridanga', 'kartal',
 
 @each $article in $articles {
   .bg-#{$article} {
-    background-image: url('../assets/img/#{$article}.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url('../img/#{$article}.jpg');
   }
 }
 
