@@ -1,4 +1,4 @@
-var page = document.currentScript.getAttribute('page');
+var page = document.currentScript.getAttribute('id');
 
 fetchComponent('footer');
 fetchComponent('header', function() {
