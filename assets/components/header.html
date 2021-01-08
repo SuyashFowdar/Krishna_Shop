@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/bcea3aca40.js" crossorigin="anonymous"></script>
+  <title>KS</title>
+</head>
+<body>
+  <div class="topbar w-100">
+    <nav class="row cross-center page-max-width main-space-between-sm w-100-sm">
+      <a href="./" class="row cross-center main-center-lg main-start-sm w-20-lg w-40-sm h-100">
+        <div class="ks-icon bg-cover header-icon"></div>
+        <span class="row flex main-center-lg main-start-sm"><i class="fas fa-home"></i>Home</span>
+      </a>
+      <div class="row-lg flex-lg h-100 menus-container">
+        <div class="row-lg flex h-100 other-menus w-100-sm hide-sm">
+          <a href="#" class="row cross-center main-center w-20-lg h-100"><i class="fas fa-box-open"></i>Collection</a>
+          <a href="#" class="row cross-center main-center w-20-lg h-100"><i class="fas fa-tag"></i>Add for sale</a>
+          <div class="h-100 row main-end-lg main-center-sm flex">
+            <a href="#" class="row cross-center main-center w-40-lg h-100 flex-sm"><i class="fas fa-user"></i>Account</a>
+          </div>
+        </div>
+        <a href="#" class="row cross-center main-center hide-lg menu h-100"><i class="fas fa-bars"></i></a>
+      </div>
+    </nav>
+  </div>
+  <header class="search-header h-200px column main-center-lg cross-center-sm">
+    <img src="assets/icons/KS.png" alt="KS" class="ks-icon bg-cover search-icon">
+    <div class="header-content column w-100 cross-center main-center">
+      <h1>Krishna Shop</h1>
+      <p>The online shop for all Gaudiya Tradition lovers.</p>
+      <form name="search-form" action="search-result.html" class="row-lg column-sm w-100-sm">
+        <select name="item-type" id="item-type" class="w-100-sm bg-white">
+          <option value="select" disabled selected>Select item type...</option>
+          <option value="clothes">Clothes</option>
+          <option value="instruments">Musical Instruments</option>
+          <option value="temple">Temple Items</option>
+          <option value="other">Other Accessories</option>
+        </select>
+        <input type="text" name="item-name" id="item-input" placeholder="Enter name of item" class="w-100-sm">
+        <input type="submit" value="Search" class="w-100-sm btn-2">
+      </form>
+    </div>
+  </header>
+</body>
+</html>
